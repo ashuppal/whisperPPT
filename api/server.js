@@ -25,7 +25,8 @@ app.post('/whisper', upload.single('audio'), async (req, res) => {
     if (req.file.size > MAX_FILE_SIZE_BYTES) {
       return res.status(400).json({ error: `File size must be less than ${MAX_FILE_SIZE_MB}MB` });
     }
-
+    //print the length of the file
+    console.log(req.file.size);
     // Get the audio file from the request
     const audioFile = req.file.buffer;
 
