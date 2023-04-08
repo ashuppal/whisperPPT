@@ -13,7 +13,7 @@ EXAMPLE:
 [
 {
 "Header": "Seattle, Washington",
-"Bullet Points": [
+"BulletPoints": [
 "Seat of King County, Washington",
 "Population of 737,015 (2020)",
 "Largest city in Washington and the Pacific Northwest"
@@ -21,7 +21,7 @@ EXAMPLE:
 },
 {
 "Header": "Geography and Trade",
-"Bullet Points": [
+"BulletPoints": [
 "Located between Puget Sound & Lake Washington",
 "Major gateway for trade with East Asia"
 ]
@@ -45,6 +45,8 @@ YOUR RESPONSE:`;
         'Content-Type': 'application/json',
       },
     });
+
+    console.log('response.data.choices[0].text:', response.data.choices[0].text);
 
     const parsedResponse = JSON.parse(response.data.choices[0].text.trim());
     return parsedResponse;
