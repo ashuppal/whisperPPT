@@ -3,6 +3,8 @@ const axios = require('axios');
 const multer = require('multer');
 const cors = require('cors');
 const FormData = require('form-data');
+const { getSlidesFromTranscription } = require('./slideGenerator');
+
 
 const app = express();
 app.use(cors());
@@ -34,7 +36,10 @@ app.post('/whisper', upload.single('audio'), async (req, res) => {
       },
     });
 
-    res.json({ transcription: response.data.text });
+    //call slide generator
+    const slides = await getSlidesFromTranscription(response.data.text);
+    res.json({ transcription: response.data.text, slides: slides });
+
   } catch (error) {
     console.error('Error getting transcription:', error);
     res.status(500).json({ error: 'Error getting transcription' });
