@@ -26,10 +26,8 @@ const Transcription = ({ audioFile }) => {
   
   // useEffect hook to handle side effect of getting transcription when audioFile is updated
   useEffect(() => {
-    // If audioFile is not provided, do not perform any action
     if (!audioFile) return;
-
-    // Function to get the transcription and slide data from the server
+  
     const getTranscription = async () => {
       try {
         const formData = new FormData();
@@ -41,17 +39,18 @@ const Transcription = ({ audioFile }) => {
           }
         });
   
-        setTranscription(response.data.transcription); // Update the transcription state
-        generatePPT(response.data.slides); // Generate PowerPoint presentation from the slides
+        if (!transcription) {
+          setTranscription(response.data.transcription);
+          generatePPT(response.data.slides);
+        }
       } catch (error) {
         console.error('Error getting transcription:', error);
       }
     };
   
-    // Call the getTranscription function
     getTranscription();
-  }, [audioFile]);
-
+  }, [audioFile, transcription]);
+  
   return (
     <div>
       {transcription ? (
