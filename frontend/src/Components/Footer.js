@@ -1,6 +1,7 @@
 import React from 'react';
 import { styled } from '@mui/system';
 
+
 const FooterContainer = styled('footer')({
   marginTop: 'auto',
   background: '#333333',

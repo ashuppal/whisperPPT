@@ -1,10 +1,11 @@
 import React from 'react';
 import { Typography, Button, Box } from '@mui/material';
 import { styled } from '@mui/system';
+import MainContent from './MainContent';
 
 const GradientBackground = styled('div')({
   minHeight: '60vh',
-  background: 'linear-gradient(to bottom, #1e3c72, #2a5298)',
+  background: 'offwhite',
 
   display: 'flex',
   flexDirection: 'column',
@@ -14,31 +15,51 @@ const GradientBackground = styled('div')({
 });
 
 const StyledTypography = styled(Typography)({
-  color: '#ffffff',
+    fontFamily: 'Righteous, sans-serif',
+    background: 'linear-gradient(135deg, #FFCC33 0%, #E233FF 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    fontWeight: 500,
+});
+
+const StyledIconTypography = styled(Typography)({
+  fontFamily: 'Righteous, sans-serif',
   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
   fontWeight: 500,
 });
 
-
-
 const LandingPage = ({ onUpload }) => {
   return (
+    <MainContent> 
     <GradientBackground>
       <Box sx={{ p: 2 }}>
-        <StyledTypography variant="h2" sx={{ mb: 2 }}>
-         AudioSpark 🎤
+        <StyledTypography variant="h2" sx={{ mb: 2, display: 'inline' }}>
+          AudioSpark
         </StyledTypography>
-        <StyledTypography variant="body1" sx={{ mb: 2 }}>
-          Ignite your presentations! 🔥
-        </StyledTypography> 
-        <Button variant="contained" component="label" sx={{ mb: 2, background: 'linear-gradient(45deg, #ff7300, #fffb00 #48ff00, #002bff,#ff00c8' }}   >
+        <StyledIconTypography variant="h2" sx={{ mb: 2, display: 'inline' }}>
+          {' '}
+          🎤
+        </StyledIconTypography>
+        <h2 fontFamily = 'Righteous'>
+        Ignite your presentations! 🔥
+        </h2>
+        <Button
+          variant="contained"
+          
+          component="label"
+          sx={{
+            mb: 2,
+            background: 'linear-gradient(135deg, #FFCC33 0%, #E233FF 100%)'
+           
+          }}
+        >
           Upload an Audio File
           <input type="file" accept="audio/*" hidden onChange={onUpload} />
         </Button>
       </Box>
     </GradientBackground>
+    </MainContent>
   );
 };
 
 export default LandingPage;
-
