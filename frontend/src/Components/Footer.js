@@ -1,15 +1,29 @@
-//footer
-
 import React from 'react';
+import { styled } from '@mui/system';
+
+const FooterContainer = styled('footer')({
+  marginTop: 'auto',
+  background: '#333333',
+  color: '#ffffff',
+  padding: '1rem',
+});
+
+const FooterText = styled('span')({
+  marginRight: '0.5rem',
+});
+
+const FooterLink = styled('a')({
+  color: '#ffffff',
+  textDecoration: 'none',
+});
 
 const Footer = () => {
   return (
-    <div>
-      <h5>Ashwini Uppal</h5>
-    </div>
+    <FooterContainer>
+      <FooterText>Created by Ashwini Uppal</FooterText>
+      <FooterLink href="https://www.linkedin.com/in/ashwini-uppal/">|  LinkedIn</FooterLink>
+    </FooterContainer>
   );
-}
+};
 
 export default Footer;
-
-//  //background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
