@@ -59,7 +59,7 @@ const Transcription = ({ audioFile }) => {
         const formData = new FormData();
         formData.append('audio', audioFile);
         // Send the audio file to the backend for transcription
-        const response = await axios.post(`${REACT_APP_API_URL}\\whisper`, formData, {
+        const response = await axios.post(`${REACT_APP_API_URL}/whisper`, formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           }
