@@ -3,7 +3,7 @@ import { Typography, Button, Box } from '@mui/material';
 import { styled } from '@mui/system';
 
 const GradientBackground = styled('div')({
-  minHeight: '80vh',
+  minHeight: '70vh',
   background: 'linear-gradient(to bottom, #1e3c72, #2a5298)',
 
   display: 'flex',
