@@ -31,7 +31,7 @@ const LandingPage = ({ onUpload }) => {
         <StyledTypography variant="body1" sx={{ mb: 2 }}>
           Ignite your presentations! 🔥
         </StyledTypography> 
-        <Button variant="contained" component="label" sx={{ mb: 2 }}>
+        <Button variant="contained" component="label" sx={{ mb: 2, background: 'linear-gradient(45deg, #ff7300, #fffb00 #48ff00, #002bff,#ff00c8' }}   >
           Upload an Audio File
           <input type="file" accept="audio/*" hidden onChange={onUpload} />
         </Button>
@@ -42,45 +42,3 @@ const LandingPage = ({ onUpload }) => {
 
 export default LandingPage;
 
-
-// import React from 'react';
-// import { Typography, Box, Button } from '@mui/material';
-
-// const LandingPage = ({ onUpload }) => {
-//   return (
-//     <Box height="60vh" display="flex" alignItems="center" justifyContent="center">
-//       <Box maxWidth={400} textAlign="center" p={4}>
-//         <Typography variant="h3" gutterBottom>
-//           Audio to Text Converter
-//         </Typography>
-//         <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-//           Upload an audio file and get it transcribed using OpenAI's Whisper API.
-//         </Typography>
-//         <Button variant="contained" component="label">
-//           Upload File
-//           <input type="file" accept="audio/*" hidden onChange={onUpload} />
-//         </Button>
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// export default LandingPage;
-
-
-
-
-
-// import React from 'react';
-
-// const LandingPage = ({ onUpload }) => {
-//   return (
-//     <div>
-//       <h1>Audio to Text Converter</h1>
-//       <p>Upload an audio file and get it transcribed using OpenAI's Whisper API.</p>
-//       <input type="file" accept="audio/*" onChange={onUpload} />
-//     </div>
-//   );
-// };
-
-// export default LandingPage;
