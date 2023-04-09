@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PptxGenJS from 'pptxgenjs';
 
+
 const Transcription = ({ audioFile }) => {
   const [transcription, setTranscription] = useState(null);
 
