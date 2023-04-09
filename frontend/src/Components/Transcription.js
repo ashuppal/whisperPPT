@@ -4,6 +4,8 @@ import PptxGenJS from 'pptxgenjs';
 import { styled } from '@mui/system';
 import { Typography, CircularProgress } from '@mui/material';
 
+const { REACT_APP_API_URL } = process.env;
+
 const TranscriptionContainer = styled('div')({
   display: 'flex',
   flexDirection: 'column',
@@ -57,7 +59,7 @@ const Transcription = ({ audioFile }) => {
         const formData = new FormData();
         formData.append('audio', audioFile);
         // Send the audio file to the backend for transcription
-        const response = await axios.post('http://localhost:3001/whisper', formData, {
+        const response = await axios.post(`${REACT_APP_API_URL}\\whisper`, formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           }
