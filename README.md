@@ -1,4 +1,4 @@
-##AudioSpark
+# AudioSpark 🎤
 
 ## Author: Ashwini Uppal
 
