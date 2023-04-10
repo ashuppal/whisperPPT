@@ -17,6 +17,8 @@ It uses the following APIs:
 2. OpenAI: Summarizes text into slides.
 3. PptxGenJS: Converts slides into a PowerPoint presentation.
 
+https://user-images.githubusercontent.com/90730785/230814706-53c73c2a-c4c1-440d-97b7-c9a89e288f97.mp4
+
 ## How to use it?
 
 - Open a terminal window and run the following command to clone the repository:
