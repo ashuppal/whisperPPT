@@ -56,6 +56,7 @@ const LandingPage = ({ onUpload }) => {
           Upload an Audio File
           <input type="file" accept="audio/*" hidden onChange={onUpload} />
         </Button>
+        <h5>Instantly generate and download your PPT by simply uploading your audio file and letting our AI do the work!</h5>
       </Box>
     </GradientBackground>
     </MainContent>
