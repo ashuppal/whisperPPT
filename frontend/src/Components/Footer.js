@@ -6,7 +6,7 @@ const FooterContainer = styled('footer')({
   marginTop: 'auto',
   background: '#333333',
   color: '#ffffff',
-  padding: '1rem',
+  padding: '1rem'
 });
 
 const FooterText = styled('span')({
