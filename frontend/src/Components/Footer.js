@@ -16,13 +16,16 @@ const FooterText = styled('span')({
 const FooterLink = styled('a')({
   color: '#ffffff',
   textDecoration: 'none',
+  marginRight: '0.5rem',
+  marginLeft: '0.5rem'
 });
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterText>Created by Ashwini Uppal</FooterText>
-      <FooterLink href="https://www.linkedin.com/in/ashwini-uppal/">|  LinkedIn</FooterLink>
+      <FooterText>Created by Ashwini Uppal</FooterText>|
+      <FooterLink href="https://www.linkedin.com/in/ashwini-uppal/">LinkedIn</FooterLink>|
+      <FooterLink href="https://github.com/ashuppal">GitHub</FooterLink>
     </FooterContainer>
   );
 };
