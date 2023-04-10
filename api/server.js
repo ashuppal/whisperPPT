@@ -14,6 +14,11 @@ const upload = multer({ storage: multer.memoryStorage() });
 const WHISPER_API_URL = 'https://api.openai.com/v1/audio/transcriptions';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
+// Add a handler for / for health-check
+app.get('/', (req, res) => {
+  res.send('Whisper API is running');
+});
+
 // Route for handling POST requests to /whisper
 app.post('/whisper', upload.single('audio'), async (req, res) => {
   try {
