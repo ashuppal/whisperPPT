@@ -13,7 +13,7 @@ AudioSpark is an ideal tool for anyone who needs to create PowerPoint presentati
 
 It uses the following APIs:
 
-1. Whisper: Converts audio to text
+1. Whisper: Converts audio to text.
 2. OpenAI: Summarizes text into slides.
 3. PptxGenJS: Converts slides into a PowerPoint presentation.
 
@@ -22,19 +22,29 @@ https://user-images.githubusercontent.com/90730785/230814706-53c73c2a-c4c1-440d-
 ## How to use it?
 
 - Open a terminal window and run the following command to clone the repository:
+
     `git clone https://github.com/ashuppal/whisperPPT.git`
+    
 - Create a `.env` file for Backend and add the following variables:
+
     - `WHISPER_API_KEY`
     - `OPENAI_API_KEY`
     - `PORT`
+    
 - Create a `.env` file for Frontend and add the following variables:
+
     - `REACT_APP_API_URL`, example 'http://localhost:5000' (replace 5000 with the port you have set in the backend .env file)
+    
 - Open a terminal window and run the following commands to start the backend:
+
     `cd api`  
     `npm start` 
+    
 - Open a terminal window and run the following commands to start the frontend:
+
     `cd frontend`
     `npm start`
+    
 - Enjoy! 
 
 
