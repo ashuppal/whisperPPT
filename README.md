@@ -2,6 +2,8 @@
 
 ## Author: Ashwini Uppal
 
+https://audiospark.onrender.com/
+
 AudioSpark is a web application that provides a unique solution for individuals and businesses who need to create PowerPoint presentations but have limited time to do so. The application is designed to convert audio files to text, and then use that text to automatically generate a PowerPoint presentation.
 
 To use AudioSpark, simply upload an audio file in a supported format, such as MP3 or WAV, and the application will transcribe the audio into text. Once the transcription is complete, AudioSpark uses Whisper and OpenAI to analyze the text and create a PowerPoint presentation that is both informative and engaging.
